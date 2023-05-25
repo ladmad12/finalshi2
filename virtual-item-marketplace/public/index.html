@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual Item Marketplace</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .image-slots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .image-slot {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      background-color: lightgray;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .image-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #purchase-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: dodgerblue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    #purchase-button:hover {
+      background-color: #3388ff;
+      transform: scale(1.05);
+    }
+
+    #welcome-message {
+      text-align: center;
+      margin-top: 30px;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #contact-link {
+      color: dodgerblue;
+      text-decoration: none;
+    }
+
+    #contact-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Site-ul OFFICIAL ROBLOX ROMANIA!</h1>
+  </div>
+
+  <div id="container">
+    <h2 id="welcome-message">Bun venit la noul nostru magazin!</h2>
+
+    <div class="image-slots">
+      <div class="image-slot">
+        <img src="image1.jpg" alt="Image 1">
+      </div>
+      <div class="image-slot">
+        <img src="image2.jpg" alt="Image 2">
+      </div>
+      <div class="image-slot">
+        <img src="image3.jpg" alt="Image 3">
+      </div>
+      <div class="image-slot">
+        <img src="image4.jpg" alt="Image 4">
+      </div>
+      <div class="image-slot">
+        <img src="image5.jpg" alt="Image 5">
+      </div>
+      <div class="image-slot">
+        <img src="image6.jpg" alt="Image 6">
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="/purchase" id="purchase-button">Achizitioneaza</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="/contact.html" id="contact-link">Contacteaza-ne!</a>
+    </div>
+  </div>
+</body>
+</html>

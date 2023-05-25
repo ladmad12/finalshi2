@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Purchase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #container {
+      width: 480px;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 18px;
+      background-color: dodgerblue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3388ff;
+      transform: scale(1.05);
+    }
+
+    #success-message {
+      display: none;
+      margin-top: 20px;
+      color: limegreen;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Cumpara</h1>
+
+    <form id="purchase-form">
+      <input type="text" id="paysafe-code" placeholder="Enter Paysafe Code (e.g., ABCD-EFGH-IJKL)">
+      <textarea id="additional-info" placeholder="Linkul profilului tau de facebook" rows="4"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <div id="success-message"></div>
+  </div>
+
+  <script>
+    document.getElementById("purchase-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      showSuccessMessage();
+    });
+
+    function showSuccessMessage() {
+      var successMessage = document.getElementById("success-message");
+      successMessage.style.display = "block";
+      successMessage.innerHTML = "Multumim frumos! In 24 de ore veti fi contactat si comanda va fi finalizata!";
+    }
+  </script>
+</body>
+</html>
